@@ -1,6 +1,5 @@
-Service = (require 'chas').Service
+module.exports = class CRUDService extends (require 'chas').Service
 
-module.exports = class CRUDService extends Service
   constructor: (@_channel) ->
     super
     @_actions = [

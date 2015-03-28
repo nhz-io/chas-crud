@@ -1,4 +1,4 @@
-module.exports = class Resource
+module.exports = class Resource extends (require 'chas').Resource
 
   index: -> callback 'index unimplemented'
 
