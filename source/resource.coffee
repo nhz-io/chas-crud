@@ -1,11 +1,11 @@
 module.exports = class Resource extends (require 'chas').Resource
 
-  index: -> callback 'index unimplemented'
+  index: (..., callback) -> callback 'index unimplemented'
 
-  create: -> callback 'create unimplemented'
+  create: (..., callback) -> callback 'create unimplemented'
 
-  read: -> callback 'read unimplemented'
+  read: (..., callback) -> callback 'read unimplemented'
 
-  update: -> callback 'update unimplemented'
+  update: (..., callback) -> callback 'update unimplemented'
 
-  destroy: -> callback 'destroy unimplemented'
+  destroy: (..., callback) -> callback 'destroy unimplemented'
