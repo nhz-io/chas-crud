@@ -17,7 +17,7 @@ module.exports = class CRUDService extends (require 'chas').Service
     unless resource = @_resources[resource]
       throw new Error "Missing resource: #{resource}"
 
-    resource.create params, {}, (err, res) =>
+    resource.create id, params, (err, res) =>
       unless @_hasError err, res then @_channel.write result:res
 
   read: (resource, id, params = {}) ->
@@ -31,7 +31,7 @@ module.exports = class CRUDService extends (require 'chas').Service
     unless resource = @_resources[resource]
       throw new Error "Missing resource: #{resource}"
 
-    resource.update id, params, {}, (err, res) =>
+    resource.update id, params, (err, res) =>
       unless @_hasError err, res then @_channel.write result:res
 
   destroy: (resource, id, params = {}) ->
